@@ -65,7 +65,7 @@ def IdxStats_ParserII(Line,EXCLUDE,FileName):
 				gene_name=Pline[1].split("_")[0]
 			else:
 				gene_name=Pline[1]
-		print Pline
+#		print Pline
 		StatLine=IDXStats(Pline[0],gene_name,Pline[1],FileName, int(Pline[2]),int(Pline[3]),float(Pline[3])/float(Pline[2]), "Null")
 	else:
 		StatLine="Null"
@@ -73,7 +73,7 @@ def IdxStats_ParserII(Line,EXCLUDE,FileName):
 	return StatLine
 
 def Depth_ParserII(Line , FileName):
-	Message="Parsing of Genome name assumes that Exon name and Genome of orgin are separated by ###.\n\t:Offending Line:\n\t"+Line
+
 	Pline=Line.split(" ")
 	if "_" in Pline[1]:
 		gene_name=Pline[1].split("_")[0]
@@ -122,13 +122,13 @@ for X in SeqStat:
 	ADD=False
 	
 	if "nad7" in SeqStat[X].Exon:
-		print SeqStat[X].Exon
+		#print SeqStat[X].Exon
 		ADD=True
 	elif "nad4" in SeqStat[X].Exon and "nad4L" not in SeqStat[X].Exon :
-		print SeqStat[X].Exon
+		#print SeqStat[X].Exon
 		ADD=True
 	elif "matR" in SeqStat[X].Exon:
-		print SeqStat[X].Exon
+		#print SeqStat[X].Exon
 		ADD=True
 	if ADD is True:
 		tmpDict[X]=SeqStat[X]
@@ -171,6 +171,7 @@ for TotalLine in open(CONTROL,"r"):
 
 NormLevel={}
 
+
 for EXON in SeqStat:
 #	print EXON
 	IDX=SeqStat[EXON]
@@ -197,10 +198,10 @@ for X in NormLevel:
 	Normalizer+= NormLevel[X][0]
 	AvgGaps+= NormLevel[X][1]
 	Counter+=1
-	print NormLevel[X][0]
+#	print NormLevel[X][0]
 Normalizer=float(Normalizer)/float(Counter)
 AvgGaps=float(AvgGaps)/float(Counter)
-print "Normalizer and gaps", Normalizer, AvgGaps
+#print "Normalizer and gaps", Normalizer, AvgGaps
 
 #------------------------------------------------------------------
 
@@ -329,6 +330,8 @@ idx.close()
 TraceOut.close()
 SUMMARY.close()
 cds_idx.close()
+
+
 
 
 
