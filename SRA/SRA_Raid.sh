@@ -19,11 +19,10 @@ do
 	
 	echo " 
 
-	Sleeping just finshed $X
+	Just finshed $X
 
 "
- 	
-		sleep 3600
+
 
 
 
