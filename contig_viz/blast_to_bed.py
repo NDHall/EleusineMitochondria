@@ -51,10 +51,10 @@ class blast_line:
 	def __init__(self, qseqid, sseqid, qstart, qend, qlen, slen):
 		self.qseqid=qseqid
 		self.sseqid=sseqid
-		self.qstart=qstart
-		self.qend=qend
-		self.qlen=qlen
-		self.slen=slen
+		self.qstart=int(qstart)
+		self.qend=int(qend)
+		self.qlen=int(qlen)
+		self.slen=int(slen)
 
 f=open(HANDLE,"r")
 #Currently not using a write to file option just sending all to stout
@@ -75,10 +75,10 @@ for Line in f:
 		Chrom=BL.qseqid
 		counter+=1
 	if BL.qstart < BL.qend:
-		print "chr"+str(counter), BL.qstart, BL.qend, BL.sseqid, "1000 +"
+		print "chr"+str(counter), str( BL.qstart -1), str(BL.qend), str(BL.sseqid), "1000 +"
 		
 	elif BL.qstart > BL.qend:
-		print "chr"+str(counter), BL.qend, BL.qstart, BL.sseqid, "1000 -"
+		print "chr"+str(counter), str( BL.qend -1 ), str(BL.qstart), str(BL.sseqid), "1000 -"
 	else:
 		print "# poor record", BL.qstart, BL.qend
 
