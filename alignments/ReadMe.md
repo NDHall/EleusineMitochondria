@@ -2,7 +2,7 @@ This folder contains alignments used for the analysis in the GBE paper.
 
 
 1. `alns_and_key.tar.gz`
-  contains inframe exon level alignments in phyllip format aling with SRA to species name key. The key uses '###' as a delimiter, so that
+  contains inframe exon level alignments in phyllip format align with SRA to species name key. The key uses '###' as a delimiter, so that
   it can easily be used in ad hoc for do done loops that are common to BASH. This file contains all exon level alignments that passed QC     and as such there is variability in the set of operational taxonomic units present in each. 
   
   ```
