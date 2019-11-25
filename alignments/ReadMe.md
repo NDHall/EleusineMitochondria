@@ -28,7 +28,7 @@ atp6.phy  atp6.tre  atp8.phy  atp8.tre
 atp9.phy  atp9.tre
 ```
 
-3.`raxml.tar.gz` contains the output from FASconCAT, PartitionFinder V2.0, and RAxML, run with both exon level partitions and no paritions. The tree topology for both trees remains inaccurate, though it does cluster species together rather well.
+3. `raxml.tar.gz` contains the output from FASconCAT, PartitionFinder V2.0, and RAxML, run with both exon level partitions and no paritions. The tree topology for both trees remains inaccurate, though it does cluster species together rather well.
 
 ```
 FcC_info.xls                 FcC_supermatrix_partition.txt
